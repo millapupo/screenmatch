@@ -19,7 +19,7 @@ public class ScreenmatchApplication implements CommandLineRunner {
 	@Override
 	public void run(String... args) throws Exception {
 		var consumoApi = new ConsumoApi();
-		var json = consumoApi.obterDados("https://api.themoviedb.org/3/tv/4586-gilmore-girls/season/7/episode/1?api_key=274cc430a0081af16c18ab734b16f196");
+		var json = consumoApi.obterDados("https://api.themoviedb.org/3/tv/4586-gilmore-girls?api_key=274cc430a0081af16c18ab734b16f196");
 		System.out.println(json);
 		ConverteDados conversor = new ConverteDados();
 		DadosSeries dados = conversor.obterDados(json, DadosSeries.class);
